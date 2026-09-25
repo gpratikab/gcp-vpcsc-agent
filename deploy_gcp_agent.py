@@ -23,11 +23,14 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # =====================================================================
 # Consolidated Environment Variables & Configuration
 # =====================================================================
-PROJECT_ID = os.environ.get("PROJECT_ID", "pratik-ag-vpcsc-test")
-LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
+
+## Second argument is for default if the variable is not available in the environment
+
+PROJECT_ID = os.environ.get("PROJ_ID", "pratik-ag-vpcsc-test")
+LOCATION = os.environ.get("REGION", "us-central1")
 BUCKET = os.environ.get("STAGING_BUCKET", "agent-temp-bucket-fsaft")
 REG_LOCATION = os.environ.get("AGENT_REGISTRY_LOCATION", "global")
-EGRESS_GATEWAY = os.environ.get("EGRESS_GATEWAY", "gateway")
+EGRESS_GATEWAY = os.environ.get("AGW_NAME", "gateway")
 MODEL_NAME = os.environ.get("MODEL_NAME", "gemini-2.5-flash")
 AGENT_DISPLAY_NAME = os.environ.get("AGENT_DISPLAY_NAME", f"gcp_agent-{getpass.getuser()}")
 ALLOWED_MCP_SERVERS = {
