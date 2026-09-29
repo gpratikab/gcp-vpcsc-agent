@@ -1,5 +1,5 @@
 cloudpickle
-mcp>=1.24.0, <2.0
+mcp>=1.24.0, <=2.2.0
 fastapi
 uvicorn
 pydantic
@@ -7,7 +7,7 @@ google-cloud-aiplatform[agent_engines]
 google-genai
 google-auth
 google-cloud-iamconnectorcredentials
-google-adk>=1.30
+google-adk>=2.9.2
 google-cloud-agentidentitycredentials
 a2a-sdk
 google-adk[a2a]
